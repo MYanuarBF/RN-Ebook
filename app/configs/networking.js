@@ -1,7 +1,7 @@
 /* global fetch:false */
 
 export const config = {
-  baseUrl: 'https://reqres.in/api'
+  baseUrl: 'http://ec2-3-92-61-60.compute-1.amazonaws.com//api'
 };
 
 export const STATUS_CODE = {

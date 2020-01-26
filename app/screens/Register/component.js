@@ -17,37 +17,37 @@ export default class Component extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: '',
       email: '',
       password: ''
     };
   }
 
-  _signIn = async () => {
-    const { email, password } = this.state;
-    const params = { email, password };
+  _signUp = async () => {
+    const { name, email, password } = this.state;
+    const params = { name, email, password };
     try {
-      const result = await ENDPOINT.login(params);
+      const result = await ENDPOINT.register(params);
       const myJSON = JSON.stringify(params);
       alert(myJSON);
       console.log({ result });
       if (result.access_token.length > 0) {
         this.props.navigation.navigate('App');
       } else {
-        ToastAndroid.show('Failed to login', ToastAndroid.SHORT);
+        ToastAndroid.show('Failed to Register', ToastAndroid.SHORT);
       }
     } catch (error) {
       ToastAndroid.show('error.networkError', ToastAndroid.SHORT);
     }
   };
 
-  _signUp = () => {
-    console.log('SIGN UP');
+  _signIn = () => {
     const { navigation } = this.props;
-    navigation.navigate('Register');
+    navigation.navigate('LogIn');
   };
 
   render() {
-    const { email, password } = this.state;
+    const { name, email, password } = this.state;
     return (
       <MainScreen style={styles.mainContainer}>
         <View>
@@ -58,7 +58,15 @@ export default class Component extends React.Component {
             </View>
           </View>
           <View style={styles.container} />
-          <Text style={styles.login}>LOG IN</Text>
+          <Text style={styles.login}>Register</Text>
+          <Input
+            label=""
+            placeholder={I18n.t('username')}
+            editable
+            autoCapitalize="none"
+            value={name}
+            onChangeText={name => this.setState({ name })}
+          />
           <Input
             label=""
             placeholder={I18n.t('email')}
@@ -77,15 +85,15 @@ export default class Component extends React.Component {
             secureTextEntry
           />
           <View style={styles.btnLogin}>
-            <Button type="raised-ripple" title={I18n.t('login')} onPress={this._signIn} />
+            <Button type="raised-ripple" title={I18n.t('register')} onPress={this._signUp} />
           </View>
           <View style={styles.margin} />
         </View>
         <Button
           customText={styles.outlinedText}
           customContainer={styles.outlined}
-          title={I18n.t('register')}
-          onPress={this._signUp}
+          title={I18n.t('login')}
+          onPress={this._signIn}
         />
       </MainScreen>
     );

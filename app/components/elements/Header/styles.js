@@ -1,10 +1,10 @@
 import { StyleSheet, Platform } from 'react-native';
-import { COLOR_WHITE, FONT_HEADLINE6_PRIMARY, COLOR_BASE_PRIMARY_MAIN } from '../../../styles';
+import { COLOR_WHITE, FONT_HEADLINE6_PRIMARY, COLOR_BLACK } from '../../../styles';
 
 export default StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: COLOR_BASE_PRIMARY_MAIN,
+    backgroundColor: COLOR_WHITE,
     height: Platform.OS === 'ios' ? 44 : 56
   },
   centerContainer: {
@@ -19,6 +19,6 @@ export default StyleSheet.create({
   },
   title: {
     ...FONT_HEADLINE6_PRIMARY,
-    color: COLOR_WHITE
+    color: COLOR_BLACK
   }
 });

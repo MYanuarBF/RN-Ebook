@@ -22,5 +22,7 @@
   "updateBody": "Please update the application to the new version, \n to get the new contents",
   "updateTitle": "Update",
   "greet": "Welcome",
-  "login": "Log In"
+  "login": "Log In",
+  "username": "Username",
+  "register": "Register"
 }

@@ -6,6 +6,8 @@ import History from '../screens/History';
 import Account from '../screens/Account';
 import OnBoarding from '../screens/OnBoarding';
 import LogIn from '../screens/LogIn';
+import Register from '../screens/Register';
+import Materi from '../screens/Materi';
 
 export const HomeStack = StackNavigator(
   {
@@ -83,6 +85,30 @@ export const LogInStack = StackNavigator(
   {
     Home: {
       screen: LogIn,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    }
+  },
+  { headerMode: 'none', navigationOptions: { tabBarVisible: false } }
+);
+
+export const RegisterStack = StackNavigator(
+  {
+    Register: {
+      screen: Register,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    }
+  },
+  { headerMode: 'none', navigationOptions: { tabBarVisible: false } }
+);
+
+export const MateriStack = StackNavigator(
+  {
+    Register: {
+      screen: Materi,
       navigationOptions: {
         tabBarVisible: false
       }

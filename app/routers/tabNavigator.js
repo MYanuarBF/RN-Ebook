@@ -1,16 +1,15 @@
 import React from 'react';
 import { TabNavigator } from 'react-navigation';
-import { HomeStack, SearchStack, UploadPhotoStack, HistoryStack, AccountStack } from './stackNavigator';
+import { HomeStack, SearchStack} from './stackNavigator';
 import TabBarBottom from '../components/elements/TabBarBottom';
 import TabBarIcon from '../components/elements/TabBarIcon';
-import Home from '../../assets/svgs/Home';
-import Search from '../../assets/svgs/Search';
-import Add from '../../assets/svgs/Add';
-import Love from '../../assets/svgs/Love';
-import Account from '../../assets/svgs/Account';
+import SvgMateri from '../../assets/svgs/Materi';
+import SvgMateria from '../../assets/svgs/Materia';
+import SvgSoal from '../../assets/svgs/Soal';
+import SvgSoala from '../../assets/svgs/Soala';
 
 const COLOR_DARK_GREY = '#797979';
-const COLOR_GREEN = '#1ea54f';
+const COLOR_RED = '#F93939';
 const COLOR_GREY = '#bdbdbd';
 const COLOR_WHITE = '#ffffff';
 
@@ -20,10 +19,10 @@ const createTab = ({ stack, label, image, iconStyle, badge }) => ({
     tabBarLabel: label,
     tabBarIcon: ({ tintColor }) => (
       <TabBarIcon
-        isActive={tintColor === COLOR_GREEN}
+        isActive={tintColor === COLOR_RED}
         label={label}
-        icon={tintColor === COLOR_GREEN ? image.active : image.inactive}
-        iconStyle={[iconStyle, { height: 30, width: 30, tintColor }]}
+        icon={tintColor === COLOR_RED ? image.active : image.inactive}
+        iconStyle={[iconStyle, { height: 50, width: 50, tintColor }]}
         badge={badge}
         navigation={navigation}
       />
@@ -41,7 +40,7 @@ const navigatorConfig = {
   tabBarOptions: {
     showLabel: false,
     showIcon: true,
-    activeTintColor: COLOR_GREEN,
+    activeTintColor: COLOR_RED,
     inactiveTintColor: COLOR_GREY,
     style: {
       borderTopWidth: 0,
@@ -69,16 +68,16 @@ export const AppStack = createTabNavigator([
     label: 'Materi',
     stack: HomeStack,
     image: {
-      active: <Home active />,
-      inactive: <Home />
+      active: <SvgMateri/>,
+      inactive: <SvgMateria/>
     }
   },
   {
     label: 'Soal',
     stack: SearchStack,
     image: {
-      active: <Search height={40} width={40} active />,
-      inactive: <Search height={40} width={40} />
+      active: <SvgSoal/>,
+      inactive: <SvgSoala/>
     }
   }
 ]);

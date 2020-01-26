@@ -1,20 +1,23 @@
 import { StyleSheet } from 'react-native';
 import {
   COLOR_WHITE,
-  COLOR_BASE_PRIMARY_LIGHT,
   COLOR_FONT_PRIMARY_LIGHT,
-  COLOR_FONT_SECONDARY_LIGHT,
-  COLOR_BASE_SECONDARY_LIGHT
+  COLOR_BASE_SECONDARY_LIGHT,
+  COLOR_BASE_PRIMARY_MAIN,
+  COLOR_BASE_SECONDARY_MAIN,
+  COLOR_FONT_PRIMARY_RED
 } from '../../../styles';
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    height: 60
+    height: 60,
+    width: 100,
+    alignItems: 'center'
   },
   active: {
-    borderBottomWidth: 2,
-    borderBottomColor: COLOR_BASE_PRIMARY_LIGHT
+    borderTopWidth: 2,
+    borderTopColor: COLOR_BASE_PRIMARY_MAIN
   },
   inactive: {},
   icon: {},
@@ -27,7 +30,7 @@ export default StyleSheet.create({
     borderRadius: 7,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: COLOR_BASE_SECONDARY_LIGHT
+    backgroundColor: COLOR_BASE_SECONDARY_MAIN
   },
   IconBadgeNumber: {
     position: 'absolute',
@@ -53,7 +56,7 @@ export default StyleSheet.create({
     alignSelf: 'center'
   },
   activeText: {
-    color: COLOR_FONT_SECONDARY_LIGHT,
+    color: COLOR_FONT_PRIMARY_RED,
     fontSize: 10,
     alignSelf: 'center'
   }

@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-console */
 import React from 'react';
 import { View, ScrollView, Text, Image } from 'react-native';
 import MainScreen from '../../components/layouts/MainScreen';
@@ -6,7 +8,6 @@ import Button from '../../components/elements/Button';
 
 export default class Component extends React.Component {
   _video = () => {
-    console.log('Video');
     const { navigation } = this.props;
     navigation.navigate('Video');
   };

@@ -27,7 +27,6 @@ export default class Component extends React.Component {
     const params = { email, password };
     try {
       const result = await ENDPOINT.login(params);
-      const myJSON = JSON.stringify(params);
       if (result.access_token.length > 0) {
         this.props.navigation.navigate('App');
       } else {

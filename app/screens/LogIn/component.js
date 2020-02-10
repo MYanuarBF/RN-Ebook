@@ -28,8 +28,6 @@ export default class Component extends React.Component {
     try {
       const result = await ENDPOINT.login(params);
       const myJSON = JSON.stringify(params);
-      alert(myJSON);
-      console.log({ result });
       if (result.access_token.length > 0) {
         this.props.navigation.navigate('App');
       } else {

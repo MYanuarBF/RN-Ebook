@@ -11,6 +11,6 @@ export default SwitchNavigator(
     App: Drawer
   },
   {
-    initialRouteName: 'Materi'
+    initialRouteName: 'LogIn'
   }
 );  

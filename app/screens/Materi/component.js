@@ -1,15 +1,29 @@
 import React from 'react';
-import { View, ScrollView, Text } from 'react-native';
+import { View, ScrollView, Text, Image } from 'react-native';
 import MainScreen from '../../components/layouts/MainScreen';
-import Header from '../../components/elements/Header';
-import I18n from '../../i18n';
 import styles from './styles';
+import Button from '../../components/elements/Button';
 
 export default class Component extends React.Component {
+  _video = () => {
+    console.log('Video');
+    const { navigation } = this.props;
+    navigation.navigate('Video');
+  };
+
+  _quiz = () => {
+    const { navigation } = this.props;
+    navigation.navigate('Quiz');
+  };
+
+  _ujian = () => {
+    const { navigation } = this.props;
+    navigation.navigate('Ujian');
+  };
+
   render() {
     return (
       <MainScreen style={styles.container}>
-        <Header back />
         <ScrollView>
           <View style={styles.greet}>
             <View style={styles.bar} />
@@ -17,6 +31,7 @@ export default class Component extends React.Component {
               <Text style={styles.greetTitle}>Tata Cara Mengurus Jenazah dalam Islam</Text>
             </View>
           </View>
+          <Image style={styles.image} source={{ uri: 'https://i.ibb.co/txrqDw4/image3.jpg' }} />
           <Text style={styles.h1}>A. Perawatan jenazah</Text>
           <Text style={styles.h2}>
             Perawatan jenazah adalah pengurusan jenazah seorang muslim/muslimah dengan cara memandikan,
@@ -120,6 +135,32 @@ export default class Component extends React.Component {
             3. Kemudian setelah itu disunahkan untuk membuka ikatan tali jenazah yang dimulai dari kepala.
           </Text>
           <View />
+          <View style={styles.btn}>
+            <View style={styles.btn1}>
+              <Button
+                customText={styles.outlinedText}
+                customContainer={styles.outlined}
+                title="Latihan Soal"
+                onPress={this._quiz}
+              />
+            </View>
+            <View style={styles.btn1}>
+              <Button
+                customText={styles.outlinedText}
+                customContainer={styles.outlined}
+                title="Langsung Ujian"
+                onPress={this._ujian}
+              />
+            </View>
+            <View style={styles.btn1}>
+              <Button
+                customText={styles.outlinedText}
+                customContainer={styles.outlined}
+                title="Video"
+                onPress={this._video}
+              />
+            </View>
+          </View>
         </ScrollView>
       </MainScreen>
     );

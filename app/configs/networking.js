@@ -1,7 +1,7 @@
 /* global fetch:false */
 
 export const config = {
-  baseUrl: 'http://ec2-3-92-61-60.compute-1.amazonaws.com//api'
+  baseUrl: 'http://ec2-18-207-225-88.compute-1.amazonaws.com/api'
 };
 
 export const STATUS_CODE = {

@@ -65,5 +65,16 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     color: '#000',
     paddingLeft: 20
+  },
+  image: {
+    width: 400,
+    height: 250,
+    resizeMode: 'cover'
+  },
+  btn: {
+    paddingHorizontal: 10
+  },
+  btn1: {
+    paddingTop: 10
   }
 });

@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-console */
+/* eslint-disable react/no-unused-state */
+/* eslint-disable no-return-assign */
+/* eslint-disable react-native/no-color-literals */
+/* eslint-disable react/sort-comp */
 import React from 'react';
 import { View, ScrollView, Text, Image } from 'react-native';
 import MainScreen from '../../components/layouts/MainScreen';
@@ -137,22 +140,6 @@ export default class Component extends React.Component {
           </Text>
           <View />
           <View style={styles.btn}>
-            <View style={styles.btn1}>
-              <Button
-                customText={styles.outlinedText}
-                customContainer={styles.outlined}
-                title="Latihan Soal"
-                onPress={this._quiz}
-              />
-            </View>
-            <View style={styles.btn1}>
-              <Button
-                customText={styles.outlinedText}
-                customContainer={styles.outlined}
-                title="Langsung Ujian"
-                onPress={this._ujian}
-              />
-            </View>
             <View style={styles.btn1}>
               <Button
                 customText={styles.outlinedText}

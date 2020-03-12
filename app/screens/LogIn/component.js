@@ -51,7 +51,7 @@ export default class Component extends React.Component {
           <View style={styles.greet}>
             <View style={styles.bar} />
             <View style={styles.greetStyle}>
-              <Text style={styles.greetTitle}>WELLCOME</Text>
+              <Text style={styles.greetTitle}>Penajah</Text>
             </View>
           </View>
           <View style={styles.container} />

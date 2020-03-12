@@ -8,13 +8,15 @@ import Register from '../screens/Register';
 import Materi from '../screens/Materi';
 import Quiz from '../screens/Quiz';
 import Ujian from '../screens/Ujian';
+import Video from '../screens/Video';
+import About from '../screens/About';
 
 export const HomeStack = StackNavigator(
   {
     Home: {
       screen: Home,
       navigationOptions: {
-        tabBarVisible: true
+        tabBarVisible: false
       }
     },
     Materi: {
@@ -31,6 +33,18 @@ export const HomeStack = StackNavigator(
     },
     Ujian: {
       screen: Ujian,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    },
+    Video: {
+      screen: Video,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    },
+    About: {
+      screen: About,
       navigationOptions: {
         tabBarVisible: false
       }

@@ -1,15 +1,15 @@
 import { StyleSheet } from 'react-native';
 import { COLOR_WHITE } from '../../styles';
 
+import { scale } from '../../utils/scaling';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: COLOR_WHITE
   },
-  list: {
-    width: 12
+  video: {
+    paddingLeft: scale(11)
   }
 });
 

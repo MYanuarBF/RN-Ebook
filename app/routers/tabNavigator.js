@@ -5,8 +5,8 @@ import TabBarBottom from '../components/elements/TabBarBottom';
 import TabBarIcon from '../components/elements/TabBarIcon';
 import SvgMateri from '../../assets/svgs/Materi';
 import SvgMateria from '../../assets/svgs/Materia';
-import SvgSoal from '../../assets/svgs/Soal';
-import SvgSoala from '../../assets/svgs/Soala';
+// import SvgSoal from '../../assets/svgs/Soal';
+// import SvgSoala from '../../assets/svgs/Soala';
 
 const COLOR_DARK_GREY = '#797979';
 const COLOR_RED = '#F93939';
@@ -70,14 +70,6 @@ export const AppStack = createTabNavigator([
     image: {
       active: <SvgMateri/>,
       inactive: <SvgMateria/>
-    }
-  },
-  {
-    label: 'Soal',
-    stack: SearchStack,
-    image: {
-      active: <SvgSoal/>,
-      inactive: <SvgSoala/>
     }
   }
 ]);

@@ -6,10 +6,10 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     backgroundColor: COLOR_WHITE,
-    paddingHorizontal: scale(20),
-    paddingBottom: 20
+    paddingLeft: scale(5),
+    paddingBottom: scale(20)
   },
   text: {
     flex: 1,
@@ -28,9 +28,9 @@ export default StyleSheet.create({
   },
   greet: {
     flexDirection: 'row',
-    paddingHorizontal: 10,
-    paddingBottom: 50,
-    paddingTop: 50
+    paddingHorizontal: scale(10),
+    paddingBottom: scale(50),
+    paddingTop: scale(50)
   },
   greetTitle: {
     fontSize: 30,
@@ -43,28 +43,29 @@ export default StyleSheet.create({
   greetStyle: {
     justifyContent: 'flex-start',
     alignSelf: 'flex-start',
-    paddingLeft: 10
+    paddingLeft: scale(10)
   },
   bar: {
-    width: 10,
-    height: 90,
+    width: scale(10),
+    height: scale(90),
     backgroundColor: COLOR_BASE_PRIMARY_MAIN
   },
   h1: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#000',
-    paddingTop: 20
+    paddingTop: scale(20)
   },
   h2: {
     color: '#0f0f0f',
-    paddingLeft: 20
+    paddingLeft: 30,
+    marginRight: 20
   },
   h3: {
     fontSize: 15,
     fontWeight: 'bold',
     color: '#000',
-    paddingLeft: 20
+    paddingLeft: 25
   },
   image: {
     width: 400,
@@ -72,7 +73,8 @@ export default StyleSheet.create({
     resizeMode: 'cover'
   },
   btn: {
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
+    paddingLeft: 30
   },
   btn1: {
     paddingTop: 10

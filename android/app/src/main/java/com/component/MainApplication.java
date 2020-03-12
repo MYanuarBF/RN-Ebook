@@ -3,6 +3,7 @@ package com.component;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.inprogress.reactnativeyoutube.ReactNativeYouTube;
 import com.RNFetchBlob.RNFetchBlobPackage;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.facebook.react.ReactNativeHost;
@@ -27,6 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new RNFetchBlobPackage(),
+            new ReactNativeYouTube(),
             new SvgPackage(),
             new RNI18nPackage()
       );

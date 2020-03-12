@@ -1,23 +1,39 @@
+/* eslint-disable import/first */
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { View } from 'react-native';
-import MainScreen from '../../components/layouts/MainScreen';
+import { Text } from 'react-native';
 import Header from '../../components/elements/Header';
-import Button from '../../components/elements/Button';
-import Search from '../../../assets/svgs/Search';
-import styles from './styles';
+import { List, ListItem, Content, Container } from 'native-base';
+import styles from '../../components/layouts/MainScreen/styles';
 
 export default class Component extends React.Component {
   _onPress = () => {};
 
+  _quiz = () => {
+    const { navigation } = this.props;
+    navigation.navigate('Quiz');
+  };
+
+  _ujian = () => {
+    const { navigation } = this.props;
+    navigation.navigate('Ujian');
+  };
+
   render() {
     return (
-      <MainScreen style={styles.container}>
-        <Header title="Search" setting back />
-        <View style={styles.container}>
-          <Button title="title" disabled={false} onPress={this._onPress} type="raised-ripple" />
-          <Search />
-        </View>
-      </MainScreen>
+      <Container>
+        <Header title="Penajah" back={false} />
+        <Content>
+          <List>
+            <ListItem onPress={this._quiz} style={styles.list}>
+              <Text>Quiz</Text>
+            </ListItem>
+            <ListItem onPress={this._ujian}>
+              <Text>Ujian</Text>
+            </ListItem>
+          </List>
+        </Content>
+      </Container>
     );
   }
 }

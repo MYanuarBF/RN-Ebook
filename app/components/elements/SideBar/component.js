@@ -1,12 +1,17 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
 export default class Component extends React.Component {
+  _signIn = () => {
+    this.props.navigation.navigate('LogIn');
+  };
   _renderCard = () => (
     <View style={styles.card}>
-      <Text style={styles.title}>component</Text>
-      <Text style={styles.label}>SideBar</Text>
+      <TouchableOpacity onPress={this._signIn}>
+        <Text style={styles.title}>Log Out</Text>
+      </TouchableOpacity>
     </View>
   );
 

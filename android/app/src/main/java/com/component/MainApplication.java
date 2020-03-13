@@ -1,4 +1,4 @@
-package com.component;
+package com.penajah;
 
 import android.app.Application;
 

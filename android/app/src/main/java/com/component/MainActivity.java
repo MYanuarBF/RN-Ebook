@@ -1,4 +1,4 @@
-package com.component;
+package com.penajah;
 
 import com.facebook.react.ReactActivity;
 
